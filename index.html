@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&display=swap');
+
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        :root {
+            --main_color: #B91646;
+        }
+
+        body {
+            background-color: #f2f2f2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        h2 {
+            color: var(--main_color);
+            font-size: 3rem;
+        }
+
+        .separator {
+            width: 100%;
+            border: 1px solid var(--main_color);
+            margin: 20px 0px;
+        }
+
+        #lname {
+            margin-left: 5px;
+        }
+
+        .input {
+            padding: 15px 15px;
+            width: 230px;
+            font-size: 16px;
+            border: 2px solid grey;
+            border-radius: 8px;
+            outline: none;
+            transition: .4s;
+            color: var(--main_color);
+        }
+
+        button {
+            border: 2px solid var(--main_color);
+            padding: 15px 0px;
+            font-size: 15px;
+            width: 265px;
+            background-color: var(--main_color);
+            color: #FFFFFF;
+            border-radius: 8px;
+            outline: none;
+            cursor: pointer;
+            transition: .2s;
+            margin-top: 20px;
+        }
+
+        button:hover {
+            color: var(--main_color);
+            background-color: #FFFFFF;
+            transition: .2s;
+        }
+
+        form label {
+            margin-bottom: 10px;
+            display: block;
+            font-weight: bold;
+        }
+    </style>
+    <script>
+        function myFunction() {
+            var firstname = document.getElementById("fname").value;
+            var lastname = document.getElementById("lname").value;
+            alert("Congratulations " + firstname + " " + lastname + " you are now signed up!");
+        }
+    </script>
+</head>
+
+<body>
+
+    <table>
+        <tr>
+            <th colspan="2">
+                <h2>Sign Up Form Example</h2>
+            </th>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <hr class="separator">
+            </td>
+        </tr>
+        <form>
+            <tr>
+                <td><label for="fname,lname">First, Last Name*:</label></td>
+                <td><input type="text" id="fname" required><input type="text" id="lname" required></td>
+            </tr>
+            <tr>
+                <td><label>Organization:</label></td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td><label>Email address*:</label></td>
+                <td><input type="text" required></td>
+            </tr>
+            <tr>
+                <td><label>Work Phone:</label></td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td><label>Home Phone:</label></td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td><label>Cell Phone:</label></td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td><label>Fax:</label></td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td><label for="address">Address 1*:</label></td>
+                <td><input type="text" id="address" required></td>
+            </tr>
+            <tr>
+                <td><label>Address 2:</label></td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td><label>City*:</label></td>
+                <td><input type="text" required></td>
+            </tr>
+            <tr>
+                <td><label>State Province:</label></td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td><label>Zip Postal Code:</label></td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td><label>Country*:</label></td>
+                <td><input type="text" required></td>
+            </tr>
+            <tr>
+                <td>* required fields</td>
+                <td><button onclick="myFunction()">Submit</button></td>
+            </tr>
+        </form>
+    </table>
+</body>
+
+</html>
